@@ -90,17 +90,17 @@ footer {
 	float: right;
 	margin: 10px;
 }
-#before:checked ~ .rates > .rate1 {
-	order: 3;
+#before:checked ~ .rates > .rate_abbis {
+	order: 0;
 }
-#before:checked ~ .rates > .rate2 {
-	order: 2;
-}
-#before:checked ~ .rates > .rate3 {
+#before:checked ~ .rates > .rate_brit {
 	order: 1;
 }
-#before:checked ~ .rates > .rate4 {
-	order: 0;
+#before:checked ~ .rates > .rate_rus {
+	order: 2;
+}
+#before:checked ~ .rates > .rate_siam {
+	order: 3;
 }
 #kind1:checked ~ .cats > div:not(.abbis),
 #kind2:checked ~ .cats > div:not(.brit),
