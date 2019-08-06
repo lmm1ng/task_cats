@@ -1,0 +1,174 @@
+html {
+	margin: 0;
+	padding: 0;
+}
+body {
+	background: #767573;
+	margin: 0 auto;
+	padding: 0;
+}
+header {		
+	text-align: center;
+	margin: 30px;
+	height: 30px;
+	font-size: 30px;
+	font-weight: bold;
+	white-space: nowrap;
+}
+footer {
+	width: 100%;
+}
+.wrapper {
+	min-width: 1000px;
+	max-width: 1400px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+}
+.wrapper input[type="radio"] {
+	display: none;
+} 
+.kinds {
+	background: #9D9D9D;
+	margin-left: 30px;
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+	font-size: 20px;
+}
+.kinds > * {
+	text-align: center;
+	border: 1px solid black;
+	padding: 10px;
+}
+.cats {
+	background: white;
+	flex-grow: 3;
+}
+.cat:hover > .description {
+	display: block;
+}
+.description {
+	display: none;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	padding: 10px;
+	background: orange;
+	font-size: 15px;
+	font-weight: bold;	
+}
+.cats > * {
+	margin: 10px;
+	display: inline-block;
+	position: relative;
+}
+.rating_text {
+	color: red;
+	font-size: 20px;
+	text-transform: uppercase;
+	text-align: center;
+
+}
+.rating {
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+	padding: 10px;
+	align-self: flex-start;
+	background: #9D9D9D;
+}
+.rates {
+	margin-top: 20px;
+	display: flex;
+	flex-direction: column;
+}
+.rates > * {
+	display: flex;
+	font-size: 20px;
+	font-weight: bold;
+	float: right;
+	margin: 10px;
+}
+#before:checked ~ .rates > .rate1 {
+	order: 3;
+}
+#before:checked ~ .rates > .rate2 {
+	order: 2;
+}
+#before:checked ~ .rates > .rate3 {
+	order: 1;
+}
+#before:checked ~ .rates > .rate4 {
+	order: 0;
+}
+#kind1:checked ~ .cats > div:not(.abbis),
+#kind2:checked ~ .cats > div:not(.brit),
+#kind3:checked ~ .cats > div:not(.rus),
+#kind4:checked ~ .cats > div:not(.siam)
+ {
+	opacity: 0.5;
+}
+.kinds > *:hover {
+	background: green;
+}
+.footerL {
+	font-weight: bold;
+	margin: 5px;
+	float: left;
+}
+.footerR {
+	color: blue;
+	font-weight: bold;
+	margin: 5px;
+	float: right;
+}
+.rate1, .rate2, .rate3, .rate4  {
+  	width: 200px;
+  	height: 30px;
+}
+.rate_full {
+	height: 30px;
+	width: 200px;
+    background: linear-gradient(to right, green, white);
+}
+.rate_4 {
+	height: 30px;
+	width: 80px;
+	background: linear-gradient(to right, yellow, white);
+}
+.rate_2 {
+	height: 30px;
+	width: 40px;
+	background: linear-gradient(to right, red, white);
+}
+.rate_8 {
+	height: 30px;
+	width: 160px;
+	background: linear-gradient(to right, blue, white);
+}
+.rate_full:before {
+	content: "Абиссинская";
+}
+.rate_4:before {
+	content: 'Русская голубая';
+	white-space: nowrap;
+}
+.rate_2:before {
+	content: 'Сиамская';
+}
+.rate_8:before {
+	content: 'Британская';
+}
+.cat:nth-child(-2n + 7) img, .cat:nth-child(4n) img {
+	width: 300px;
+	height: 300px;
+}
+.cat:nth-child(-4n + 6) img {
+	width: 625px;
+	height: 300px;
+}
+.cat:nth-child(8n) img {
+	width: 955px;
+	height: 300px ;
+}
